@@ -44,8 +44,11 @@
             <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO 😢</button>
         </div>
 
-        <div id="link-google-drive" style="display: none;">
-            <img src="https://i.ibb.co/pLQmGCf/Captura-de-tela-2024-01-21-230426.png" alt="Imagem" style="max-width: 100%; height: auto; margin-top: 10px;">
+        <div class="imagem" style="display: none;">
+            <img src="https://i.ibb.co/pLQmGCf/Captura-de-tela-2024-01-21-230426.png" alt="Imagem 1" style="max-width: 70%; height: auto; margin-top: 10px;">
+        </div>
+        <div class="imagem" style="display: none;">
+            <img src="https://pandorajoias.vtexassets.com/arquivos/ids/180090/PNGTRPNT_196574CZRMX_RGB.png?v=637242832132570000" alt="Imagem 2" style="max-width: 20%; height: auto; margin-top: 2px;">
         </div>
     </div>
 
@@ -80,6 +83,10 @@
             border-radius: 5px;
             margin-top: 20px;
             font-size: 14px;
+        }
+
+        .imagem {
+            margin-top: 20px;
         }
 
         #fogos-de-artificio {
@@ -125,7 +132,9 @@
             document.getElementById('texto2').style.display = 'none';
             document.getElementById('pergunta').style.display = 'block';
             document.getElementById('botoes').style.display = 'block';
-            document.getElementById('link-google-drive').style.display = 'block';
+            document.querySelectorAll('.imagem').forEach(function(img) {
+                img.style.display = 'block';
+            });
         }
 
         function sim() {
