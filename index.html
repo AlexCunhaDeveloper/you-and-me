@@ -1,92 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduarda ❤️</title>
-</head>
-
-<body>
-    <div id="conteudo">
-        <div class="texto" id="texto1">
-            <p>A relatividade me fez querer dilatar o tempo</p>
-            <p>Para ter mais tempo para te ver sorrir</p>
-            <p>A órbita de seus sonhos, o centro de sua da luz traz vida</p>
-            <p>E massivo, a gravidade me faz ficar com os pés no chão</p>
-            <p>Uma força me puxa guiando-me</p>
-            <p>Ela é assim, uma força positiva de carisma e amor com várias vidas.</p>
-            <p>Sou um astronauta nesse espaço vazio rarefeito</p>
-            <p>Observando a Via-Láctea</p>
-            <p>Em várias constelações te vejo</p>
-            <p>Te vejo em vários pontos construindo suas verdades</p>
-            <p>Ela é assim, esperança que ilumina a escuridão.</p>
-            <p>Neste ciclo de translação ela dança</p>
-            <p>Milhões de ano luz à frente é raro encontrar uma estrela cadente</p>
-            <p>Ela é assim, cheia de energia que motiva seu próprio universo</p>
-            <button class="btn" onclick="mostraTexto('texto2')">Continuar</button>
-        </div>
-
-        <div class="texto" id="texto2" style="display: none;">
-            <p>Somos feitos de partículas que compõem todo o universo 🌌</p>
-            <p>Gosto de pensar que viajaram de 14 bilhões de anos luz através do tempo e espaço</p>
-            <p>Para criar esse momento 🚀</p>
-            <p>Passamos pelo grande filtro da vida,</p>
-            <p>Estamos aqui sorrindo, cantando, dançando e conversando sobre tudo,</p>
-            <p>E vivendo 🎉</p>
-            <button class="btn" onclick="mostraPergunta()">Continuar</button>
-        </div>
-
-        <h2 id="pergunta" style="display: none;">Eduarda, Aceita Namorar Comigo? ❤️</h2>
-        <div id="botoes" style="display: none;">
-            <button class="btn" onclick="sim()">SIM 🥰</button>
-            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO 😢</button>
-        </div>
-
-        <div class="imagem" style="display: none;">
-            <img src="https://i.ibb.co/pLQmGCf/Captura-de-tela-2024-01-21-230426.png" alt="Imagem 1" style="max-width: 70%; height: auto; margin-top: 10px;">
-        </div>
-        <div class="imagem" style="display: none;">
-            <img src="https://pandorajoias.vtexassets.com/arquivos/ids/180090/PNGTRPNT_196574CZRMX_RGB.png?v=637242832132570000" alt="Imagem 2" style="max-width: 20%; height: auto; margin-top: 2px;">
-        </div>
-    </div>
-
-    <div id="fogos-de-artificio"></div>
-
+    <title>Joyce ❤️</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #ff7a7a;
-            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Estrelas animadas no fundo */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
         #conteudo {
-            padding: 2%;
+            max-width: 800px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
         }
 
         .texto {
-            margin-top: 5vh;
-            font-size: 18px;
-            font-weight: bold;
-            white-space: pre-line;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .texto p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .btn {
-            background: black;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 10px;
-            width: 150px;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 14px;
+            padding: 15px 40px;
+            border-radius: 50px;
+            margin: 20px 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        #botoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        #botoes .btn:first-child {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        #botoes .btn:last-child {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            position: relative;
         }
 
         .imagem {
-            margin-top: 20px;
+            text-align: center;
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         #fogos-de-artificio {
@@ -100,28 +150,136 @@
         }
 
         .firework {
-            width: 15px;
-            height: 15px;
-            background-color: #ffcc00;
             position: absolute;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
-            animation: explode 1s linear;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: explode 1s ease-out forwards;
         }
 
         @keyframes explode {
             0% {
-                transform: scale(1);
+                transform: translate(0, 0);
                 opacity: 1;
             }
-
             100% {
-                transform: scale(10);
                 opacity: 0;
             }
         }
+
+        /* Corações flutuantes */
+        .heart {
+            position: fixed;
+            font-size: 2rem;
+            animation: float 6s ease-in infinite;
+            pointer-events: none;
+            z-index: 10000;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #conteudo {
+                padding: 2rem 1.5rem;
+            }
+
+            .texto p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
     </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div id="conteudo">
+        <div class="texto" id="texto1">
+            <p>🌟 A relatividade me fez querer dilatar o tempo</p>
+            <p>Para ter mais tempo para te ver sorrir</p>
+            <p>A órbita de seus sonhos, o centro de sua luz traz vida</p>
+            <p>E massivo, a gravidade me faz ficar com os pés no chão</p>
+            <p>Uma força me puxa guiando-me</p>
+            <p>Ela é assim, uma força positiva de carisma e amor com várias vidas.</p>
+            <p>Sou um astronauta nesse espaço vazio rarefeito 🚀</p>
+            <p>Observando a Via-Láctea</p>
+            <p>Em várias constelações te vejo</p>
+            <p>Te vejo em vários pontos construindo suas verdades</p>
+            <p>Ela é assim, esperança que ilumina a escuridão. ✨</p>
+            <p>Neste ciclo de translação ela dança</p>
+            <p>Milhões de anos luz à frente é raro encontrar uma estrela cadente</p>
+            <p>Ela é assim, cheia de energia que motiva seu próprio universo 🌌</p>
+            <button class="btn" onclick="mostraTexto('texto2')">Continuar ➔</button>
+        </div>
+
+        <div class="texto" id="texto2" style="display: none;">
+            <p>Somos feitos de partículas que compõem todo o universo 🌌</p>
+            <p>Gosto de pensar que viajaram 14 bilhões de anos luz através do tempo e espaço</p>
+            <p>Para criar esse momento 🚀</p>
+            <p>Passamos pelo grande filtro da vida,</p>
+            <p>Estamos aqui sorrindo, cantando, dançando e conversando sobre tudo,</p>
+            <p>E vivendo! 🎉</p>
+            <button class="btn" onclick="mostraPergunta()">Continuar ➔</button>
+        </div>
+
+        <div id="pergunta-container" style="display: none;">
+            <h2 id="pergunta">Joyce, Aceita Casar Comigo? ❤️</h2>
+            <div id="botoes">
+                <button class="btn" onclick="sim()">SIM 🥰</button>
+                <button class="btn" id="btn-nao" onclick="desvia(this)" onmouseover="desvia(this)">NÃO 😢</button>
+            </div>
+        </div>
+
+        <div class="imagem" id="imagem1" style="display: none;">
+            <img src="https://i.ibb.co/pLQmGCf/Captura-de-tela-2024-01-21-230426.png" alt="Casal apaixonado">
+        </div>
+        <div class="imagem" id="imagem2" style="display: none;">
+            <img src="https://pandorajoias.vtexassets.com/arquivos/ids/180090/PNGTRPNT_196574CZRMX_RGB.png?v=637242832132570000" alt="Anel Pandora" style="max-width: 200px;">
+        </div>
+    </div>
+
+    <div id="fogos-de-artificio"></div>
 
     <script>
+        // Criar estrelas no fundo
+        function criarEstrelas() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
         function mostraTexto(id) {
             document.getElementById('texto1').style.display = 'none';
             document.getElementById('texto2').style.display = 'none';
@@ -130,51 +288,78 @@
 
         function mostraPergunta() {
             document.getElementById('texto2').style.display = 'none';
-            document.getElementById('pergunta').style.display = 'block';
-            document.getElementById('botoes').style.display = 'block';
-            document.querySelectorAll('.imagem').forEach(function(img) {
-                img.style.display = 'block';
-            });
+            document.getElementById('pergunta-container').style.display = 'block';
+            document.getElementById('imagem1').style.display = 'block';
+            document.getElementById('imagem2').style.display = 'block';
         }
 
         function sim() {
-            alert("Eduarda, você acaba de fazer alguém muito feliz! 😊\n\nAceitando namorar comigo, você deu início a uma nova e emocionante fase da nossa jornada juntos. Mal posso esperar para construir momentos incríveis ao seu lado!");
+            alert("Joyce, feliz aniversário meu bem! 😊\n\n Esse sim sem opção de dizer não kk, Você e incrivel meu amor, continue sendo essa pessoa com esse sorriso radiante, essa mulher forte e maravilhosa. Amo-te!");
             ativarFogosArtificio();
-            // Redireciona para um URL após clicar no SIM (opcional)
-            // location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+            criarCoracoes();
         }
 
         function desvia(btn) {
-            btn.style.position = 'absolute';
-            btn.style.bottom = geraPosicao(10, 90);
-            btn.style.left = geraPosicao(10, 90);
-            console.log('opa, desviei...');
-        }
-
-        function geraPosicao(min, max) {
-            return (Math.random() * (max - min) + min) + "%";
+            const maxX = window.innerWidth - btn.offsetWidth;
+            const maxY = window.innerHeight - btn.offsetHeight;
+            
+            btn.style.position = 'fixed';
+            btn.style.left = Math.random() * maxX + 'px';
+            btn.style.top = Math.random() * maxY + 'px';
         }
 
         function ativarFogosArtificio() {
-            for (let i = 0; i < 30; i++) {
-                criarFogosDeArtificio();
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => criarFogosDeArtificio(), i * 200);
             }
         }
 
         function criarFogosDeArtificio() {
             const fogosContainer = document.getElementById('fogos-de-artificio');
-            const fogo = document.createElement('div');
-            fogo.className = 'firework';
-            fogo.style.left = `${Math.random() * 100}vw`;
-            fogo.style.top = `${Math.random() * 100}vh`;
-            fogosContainer.appendChild(fogo);
-
-            // Remover o elemento após a animação
-            fogo.addEventListener('animationend', () => {
-                fogo.remove();
-            });
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight * 0.7;
+            
+            const cores = ['#ff0000', '#ff69b4', '#ffd700', '#00ff00', '#00ffff', '#ff1493'];
+            
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.backgroundColor = cores[Math.floor(Math.random() * cores.length)];
+                
+                const angle = (Math.PI * 2 * i) / 30;
+                const velocity = 50 + Math.random() * 50;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.transform = `translate(var(--tx), var(--ty))`;
+                
+                fogosContainer.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
         }
+
+        function criarCoracoes() {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.textContent = '❤️';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+                    document.body.appendChild(heart);
+                    
+                    setTimeout(() => heart.remove(), 6000);
+                }, i * 300);
+            }
+        }
+
+        // Inicializar
+        criarEstrelas();
     </script>
 </body>
-
 </html>
